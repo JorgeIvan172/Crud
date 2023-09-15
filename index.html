@@ -1,0 +1,58 @@
+
+
+<!--IVAN-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:600&display=swap" rel="stylesheet">
+    <title>Crud Equipo.</title>
+</head>
+<body>
+            <form onsubmit="event.preventDefault();onSubmit();" autocomplete="off">
+              <center>
+                <div>
+                  <div class="inputbox">
+                    <h3 class="style_Text">Nombre del producto.</h3> <input type="text" id="nom" placeholder="Texto." required/>
+                    <i></i></div>
+                    <div class="inputbox">
+                    <h3 class="style_Text">Descripción.</h3> <input type="text" id="des" placeholder="Texto." required/>
+                    <i></i></div>
+                    <div class="inputbox">
+                    <h3 class="style_Text">Precio.</h3> <input   type="number" id="precio" placeholder="Numero." required/>
+                    <i></i></div>
+                    <br>
+                    <input class="submit" type="submit">
+                    <br><br>
+                  </div>
+                </div>
+              
+
+
+ <!--LEON-->               
+            </center>
+              <br/>
+              <div class="tabla_Centro">
+                <table class="tabla" id="tabla">
+                  <thead>
+                    <tr> 
+                      <th>Nombre del Producto.</th> 
+                      <th>Descripción.</th>
+                      <th>Precio.</th>
+                      <th>Opciones.</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+              </div>
+              </form>
+        <br/>
+        <br/>
+        </div>
+</body>
+<script type="text/javascript" src="crud.js"></script>
+</html>
