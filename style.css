@@ -1,1 +1,50 @@
+/* YAHEL */
+/* top | right | bottom | left */
+/* Estilo de todo el HTML */
+html{
+    margin: auto; /*Centra El contenido */
+    background-color: #ffffff;
+    background-attachment: fixed; /*Fondo de pagina que no se mueva al cambiar tamaño de la Pagina */
+    background-size: cover; /*Fondo De la Pagina se ajusta y escala en el fondo para cubir el HTML*/
+    padding-top: 80px;
+}
+
+form{
+    text-align: center;
+}
+
+
+/*Estilo de Texto*/
+.style_Text{
+  font-family: arial; /*Tipo de Letra*/
+  color:black; /*Color de Letra*/
+}
+
+
+/*Estilos De Tabla Donde Aparecen los Registros*/
+.tabla_Centro{
+    display: inline-block;    
+}
+
+
+.tabla{
+border-collapse: collapse; /*Estilo que hace que parezca mas una tabla*/
+font-family: 'Quicksand', sans-serif; /*Tipo de Letra*/
+}
+
+table tr th{
+    border: 1px solid Black; /*Borde de Cada Campo de la Tabla*/
+    width: 150px;
+    height: 50px;
+    color: black;
+    background-color: gray;
+}
+
+
+/*Estilos de las Nuevas Celas (Productos)*/
+td {
+    border: 1px solid #000000;
+    width: 100px;
+    height: 25px;
+}
 
