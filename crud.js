@@ -57,3 +57,17 @@ function Vaciar() {
     Fila = null; // Reiniciar la fila en edición.
 }
 
+
+
+//LEONg--------
+// Función para editar una fila existente.
+function Editarr(td) {
+    // Obtener la fila que se va a editar.
+    Fila = td.parentElement.parentElement;
+
+    // Llenar el formulario con los datos de la fila.
+    document.getElementById("nom").value = Fila.cells[0].innerHTML;
+    document.getElementById("des").value = Fila.cells[1].innerHTML;
+    document.getElementById("precio").value = Fila.cells[2].innerHTML;
+}
+
