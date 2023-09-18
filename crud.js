@@ -71,3 +71,26 @@ function Editarr(td) {
     document.getElementById("precio").value = Fila.cells[2].innerHTML;
 }
 
+//IVAN
+// Función para actualizar una fila en edición.
+function Actualizar(DataForm) {
+    // Actualizar los valores de las celdas en la fila en edición.
+    Fila.cells[0].innerHTML = DataForm.nom;
+    Fila.cells[1].innerHTML = DataForm.des;
+    Fila.cells[2].innerHTML = DataForm.cat;
+
+    // Enfocar el campo "nom" del formulario.
+    document.getElementById("nom").focus();
+}
+
+// Función para borrar una fila.
+function Borrarr(td) {
+    if (confirm('¿Seguro de borrar este registro?')) {
+        // Obtener la fila que se va a borrar y eliminarla de la tabla.
+        row = td.parentElement.parentElement;
+        document.getElementById("tabla").deleteRow(row.rowIndex);
+
+        // Vaciar el formulario después de la eliminación.
+        Vaciar();
+    }
+}
