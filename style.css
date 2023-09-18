@@ -48,3 +48,102 @@ td {
     height: 25px;
 }
 
+/* ISADORA */
+
+/*Estilo de Inputs */
+.inputbox {
+    position: relative;
+    width: 196px;
+  }
+  
+  .inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  
+  .inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #9f192c;
+    border-radius: 2px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .inputbox input:valid ~i,
+  .inputbox input:focus ~i {
+    height: 44px;
+  }
+  
+
+  /*Estilo de Buttom*/
+.submit {
+  padding: 15px 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #9f192c;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  transition: all .3s ease;
+  /*box-shadow: Black 0px 10px 0px 0px;*/ /*Diseño de Buttom*/
+  color: hsl(0, 0%, 100%);
+ }
+
+ /*Diseño de Buttom
+ .submit:hover { 
+  box-shadow: rgb(82, 201, 46) 0px 7px 0px 0px;
+ }
+ */
+ 
+ .submit:active {
+  background-color: gray;  /*Diseño de Cuando se presiona el Buttom*/
+  /*50, 168, 80*/
+  box-shadow: rgb(32, 49, 127) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+ }
+
+ .submit2 {
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 0;
+    background-color: black;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all .3s ease;
+    /*box-shadow: red;  Sombras del Buttom*/
+    color: hsl(0, 0%, 100%);
+   }
+   
+    /*Diseño de Buttom
+   .submit2:hover {
+    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+   }
+   */
+   
+   .submit2:active {
+    background-color: gray;
+    /*50, 168, 80*/
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+   }
+
+   /*Estilo de borde Donde estan Los Inputs*/
+   .style_input{
+    margin: 20px red;
+   }
