@@ -22,7 +22,7 @@ function Leer() {
     let DataForm = {};
     DataForm["nom"] = document.getElementById("nom").value;
     DataForm["des"] = document.getElementById("des").value;
-    DataForm["precio"] = document.getElementById("precio").value;
+    DataForm["catego"] = document.getElementById("catego").value;
     return DataForm;
 }
 
@@ -38,7 +38,7 @@ function InsertarDatos(data) {
     // Insertar celdas en la fila con los datos.
     columna1 = Fila.insertCell(0).innerHTML = data.nom;
     columna2 = Fila.insertCell(1).innerHTML = data.des;
-    columna3 = Fila.insertCell(2).innerHTML = data.precio;
+    columna3 = Fila.insertCell(2).innerHTML = data.catego;
     columna3 = Fila.insertCell(3).innerHTML = `<input class="submit2" type="button" onClick="Editarr(this)" value="Editar." > <br/><br/>
                                             <input class="submit2" type="button" onClick="Borrarr(this)" value="Borrar." >`;
 
@@ -53,7 +53,7 @@ function InsertarDatos(data) {
 function Vaciar() {
     document.getElementById("nom").value = "";
     document.getElementById("des").value = "";
-    document.getElementById("precio").value = "";
+    document.getElementById("catego").value = "";
     Fila = null; // Reiniciar la fila en edición.
 }
 
@@ -68,7 +68,7 @@ function Editarr(td) {
     // Llenar el formulario con los datos de la fila.
     document.getElementById("nom").value = Fila.cells[0].innerHTML;
     document.getElementById("des").value = Fila.cells[1].innerHTML;
-    document.getElementById("precio").value = Fila.cells[2].innerHTML;
+    document.getElementById("catego").value = Fila.cells[2].innerHTML;
 }
 
 //IVAN
@@ -77,7 +77,7 @@ function Actualizar(DataForm) {
     // Actualizar los valores de las celdas en la fila en edición.
     Fila.cells[0].innerHTML = DataForm.nom;
     Fila.cells[1].innerHTML = DataForm.des;
-    Fila.cells[2].innerHTML = DataForm.cat;
+    Fila.cells[2].innerHTML = DataForm.catego;
 
     // Enfocar el campo "nom" del formulario.
     document.getElementById("nom").focus();
