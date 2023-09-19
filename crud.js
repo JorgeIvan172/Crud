@@ -20,6 +20,7 @@ function onSubmit() {
 // Función para leer los datos del formulario y devolverlos como un objeto.
 function Leer() {
     let DataForm = {};
+    DataForm["id"] = document.getElementById("id").value;
     DataForm["nom"] = document.getElementById("nom").value;
     DataForm["des"] = document.getElementById("des").value;
     DataForm["catego"] = document.getElementById("catego").value;
@@ -36,10 +37,11 @@ function InsertarDatos(data) {
     let Fila = table.insertRow(table.length);
 
     // Insertar celdas en la fila con los datos.
-    columna1 = Fila.insertCell(0).innerHTML = data.nom;
-    columna2 = Fila.insertCell(1).innerHTML = data.des;
-    columna3 = Fila.insertCell(2).innerHTML = data.catego;
-    columna3 = Fila.insertCell(3).innerHTML = `<input class="submit2" type="button" onClick="Editarr(this)" value="Editar." > <br/><br/>
+    columna1 = Fila.insertCell(0).innerHTML = data.id;
+    columna2 = Fila.insertCell(1).innerHTML = data.nom;
+    columna3 = Fila.insertCell(2).innerHTML = data.des;
+    columna4 = Fila.insertCell(3).innerHTML = data.catego;
+    columna5 = Fila.insertCell(4).innerHTML = `<input class="submit2" type="button" onClick="Editarr(this)" value="Editar." > <br/><br/>
                                             <input class="submit2" type="button" onClick="Borrarr(this)" value="Borrar." >`;
 
     // Enfocar el campo "nom" del formulario.
@@ -51,6 +53,7 @@ function InsertarDatos(data) {
 
 // Función para vaciar el formulario.
 function Vaciar() {
+    document.getElementById("id").value = "";
     document.getElementById("nom").value = "";
     document.getElementById("des").value = "";
     document.getElementById("catego").value = "";
@@ -66,22 +69,26 @@ function Editarr(td) {
     Fila = td.parentElement.parentElement;
 
     // Llenar el formulario con los datos de la fila.
-    document.getElementById("nom").value = Fila.cells[0].innerHTML;
-    document.getElementById("des").value = Fila.cells[1].innerHTML;
-    document.getElementById("catego").value = Fila.cells[2].innerHTML;
+    document.getElementById("id").value = Fila.cells[0].innerHTML;
+    document.getElementById("nom").value = Fila.cells[1].innerHTML;
+    document.getElementById("des").value = Fila.cells[2].innerHTML;
+    document.getElementById("catego").value = Fila.cells[3].innerHTML;
 }
 
 //IVAN
 // Función para actualizar una fila en edición.
 function Actualizar(DataForm) {
     // Actualizar los valores de las celdas en la fila en edición.
-    Fila.cells[0].innerHTML = DataForm.nom;
-    Fila.cells[1].innerHTML = DataForm.des;
-    Fila.cells[2].innerHTML = DataForm.catego;
+    Fila.cells[0].innerHTML = DataForm.id;
+    Fila.cells[1].innerHTML = DataForm.nom;
+    Fila.cells[2].innerHTML = DataForm.des;
+    Fila.cells[3].innerHTML = DataForm.catego;
 
     // Enfocar el campo "nom" del formulario.
     document.getElementById("nom").focus();
 }
+
+
 
 // Función para borrar una fila.
 function Borrarr(td) {
